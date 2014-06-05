@@ -1,0 +1,136 @@
+<htmlform>
+    <style type="text/css">
+        table.tb {
+        background-color: #B3C2F0;
+        border: 1px solid black;
+        }
+
+        table.tb1 {
+        border: 1px solid black;
+        vertical-align: baseline;
+        text-align: left;
+        background-color: #E1E1FF;
+        }
+
+        table.tb1 tr th, table.tb1 tr td {
+        border: 0;
+        padding: 10px;
+        }
+    </style>
+
+    <div class="ke-form-header">
+        <table style="width: 100%">
+            <tr>
+                <td>Date:
+                    <encounterDate id="encounter-date" showTime="true"/>
+                </td>
+                <td>Provider:
+                    <encounterProvider default="currentUser"/>
+                </td>
+                <td>Location:
+                    <encounterLocation default="GlobalProperty:kenyaemr.defaultLocation"/>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="ke-form-content">
+        <fieldset>
+            <table align="center" border="0" class="tb" cellspacing="10">
+                <legend><center><b><h2> POSTNATAL REGISTER </h2></b></center></legend>
+                <tr>
+                    <td colspan="2">
+                        <div class="ke-form-instructions">
+                            <b>*</b>
+                            indicates a required field
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td valign="top">
+                        <table align="center" width="100%" class="tb1">
+                            <div id="">
+                                <tr>
+                                    <th colspan="1" style="background-color: #B3C2F0; color: #000000;">Registration Information</th>
+                                    <th colspan="3" style="background-color: #B3C2F0; color: #000000;">Vital Signs</th>
+                                    <th colspan="7" style="background-color: #B3C2F0; color: #000000;">Postnatal Examination</th>
+                                </tr>
+                                <tr>
+                                    <!--<th style="background-color: #B3C2F0; color: #000000;">Date of <br /> Visit</th>-->
+                                    <th style="background-color: #B3C2F0; color: #000000;">PNC Register<br /> Number</th>
+
+                                    <th style="background-color: #B3C2F0; color: #000000;">Temperature<br />(C)</th>
+                                    <th style="background-color: #B3C2F0; color: #000000;">Pulse</th>
+                                    <th style="background-color: #B3C2F0; color: #000000;">Blood<br />Pressure</th>
+
+                                    <th style="background-color: #B3C2F0; color: #000000;">Parlor</th>
+                                    <th style="background-color: #B3C2F0; color: #000000;">Breast</th>
+                                    <th style="background-color: #B3C2F0; color: #000000;">Uterus</th>
+                                    <th style="background-color: #B3C2F0; color: #000000;">PPH</th>
+                                    <th style="background-color: #B3C2F0; color: #000000;">C-section<br />site</th>
+                                    <th style="background-color: #B3C2F0; color: #000000;">Lochial</th>
+                                    <th style="background-color: #B3C2F0; color: #000000;">Episitomy</th>
+                                </tr>
+                                <repeat>
+                                    <template>
+                                        <!--<obsgroup groupingConceptId="160593AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">-->
+                                        <tr>
+                                            <!--<td><obs conceptId="159622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" /></td>-->
+                                            <td><obs conceptId="1646AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"/></td>
+
+                                            <td><obs conceptId="5088AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"/></td>
+                                            <td><obs conceptId="5087AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"/></td>
+                                            <td><obs  conceptId="5085AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"/> / <obs conceptId="5086AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"/></td>
+
+                                            <td></td>
+                                            <td></td>
+                                            <td><obs conceptId="160967AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"/></td>
+                                            <td><obs conceptId="230AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                                                     answerConceptIds="1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                                                     answerLabels="YES,NO"
+                                                     style="dropdown" />
+                                            </td>
+                                            <td><obs conceptId="162128AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                                                     answerConceptIds="145776AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,162130AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,156794AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                                                     answerLabels="Bleeding, Normal, Infected"
+                                                     style="dropdown"/>
+                                            </td>
+                                            <td><obs conceptId="1030AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                                                     answerConceptIds="159845AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,159846AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                                                     answerLabels="Excessive,Foul Smell"
+                                                     style="dropdown"/>
+                                            </td>
+                                            <td><obs conceptId="159840AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                                                     answerConceptIds="159842AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,159841AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,113919AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,159843AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                                                     answerLabels="Repaired,Gaping,Infected,Healed"
+                                                     style="dropdown"/>
+                                            </td>
+                                        </tr>
+                                        <!--</obsgroup>-->
+                                    </template>
+                                    <render/>
+                                    <render/>
+                                    <render/>
+                                    <render/>
+                                    <render/>
+                                    <render/>
+                                    <render/>
+                                    <render/>
+                                    <render/>
+                                    <render/>
+                                </repeat>
+                            </div>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+    </div>
+
+    <div class="ke-form-footer">
+        <submit/>
+    </div>
+
+
+</htmlform>

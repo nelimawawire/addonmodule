@@ -6,16 +6,16 @@
 	<!-- Apps -->
 
 	<bean id="keaddonexample.app.example" factory-bean="kenyacore.appFactoryBean" factory-method="createInstance">
-		<constructor-arg value="keaddonexample.example" />
+		<constructor-arg value="addonmodule.example" />
 		<constructor-arg value="Add-On" />
-		<constructor-arg value="keaddonexample/helloWorld" />
-		<constructor-arg value="keaddonexample:apps/example.png" />
+		<constructor-arg value="addonmodule/helloWorld" />
+		<constructor-arg value="addonmodulee:apps/example.png" />
 		<constructor-arg value="700" />
 	</bean>
 
 	<!-- Forms -->
 
-	<bean id="keaddonexample.form.example" class="org.openmrs.module.kenyacore.form.FormDescriptor">
+	<bean id="addonmodule.form.example" class="org.openmrs.module.kenyacore.form.FormDescriptor">
 		<property name="targetUuid" value="b694b1bc-2086-47dd-a4ad-ba48f9471e4b" />
 		<property name="apps">
 			<set>
@@ -23,15 +23,15 @@
 				<ref bean="kenyaemr.app.chart" />
 			</set>
 		</property>
-		<property name="icon" value="keaddonexample:forms/example.png" />
-		<property name="htmlform" value="keaddonexample:example.xml" />
+		<property name="icon" value="addonmodule:forms/example.png" />
+		<property name="htmlform" value="addonmodule:example.xml" />
 	</bean>
 
-    <bean id="keaddonexample.config.form" class="org.openmrs.module.kenyacore.form.FormConfiguration">
+    <bean id="addonmodule.config.form" class="org.openmrs.module.kenyacore.form.FormConfiguration">
 		<!-- Example of adding a form to the general visit form list -->
 		<property name="commonVisitForms">
 			<set>
-				<ref bean="keaddonexample.form.example" />
+				<ref bean="addonmodule.form.example" />
 			</set>
 		</property>
 
@@ -39,7 +39,7 @@
 		<!--<property name="programVisitForms">
 			<map>
 				<entry key-ref="kenyaemr.program.hiv">
-					<set><ref bean="kenyaapp.form.example" /></set>
+					<set><ref bean="addonmodule.form.example" /></set>
 				</entry>
 			</map>
 		</property>-->
@@ -52,7 +52,7 @@
 		</property>
 	</bean>
 
-    <bean id="keaddonexample.form.pncEnrollment" class="org.openmrs.module.kenyacore.form.FormDescriptor">
+    <bean id="addonmodule.form.pncEnrollment" class="org.openmrs.module.kenyacore.form.FormDescriptor">
         <property name="targetUuid" value="c9dd40cf-5333-49ef-88a0-351ca5255bd4" />
         <property name="apps">
             <set>
@@ -60,20 +60,20 @@
                 <ref bean="kenyaemr.app.chart" />
             </set>
         </property>
-        <property name="icon" value="keaddonexample:forms/example.png" />
-        <property name="htmlform" value="keaddonexample:pncEnrollment.xml" />
+        <property name="icon" value="addonmodule:forms/example.png" />
+        <property name="htmlform" value="addonmodule:pncEnrollment.xml" />
     </bean>
 
-    <bean id="keaddonexample.config.pncform" class="org.openmrs.module.kenyacore.form.FormConfiguration">
+    <bean id="addonmodule.config.pncform" class="org.openmrs.module.kenyacore.form.FormConfiguration">
         <property name="commonVisitForms">
             <set>
-                <ref bean="keaddonexample.form.pncEnrollment" />
+                <ref bean="addonmodule.form.pncEnrollment" />
             </set>
         </property>
     </bean>
 
 
-    <bean id="keaddonexample.form.EIDLabRequisition" class="org.openmrs.module.kenyacore.form.FormDescriptor">
+    <bean id="addonmodule.form.EIDLabRequisition" class="org.openmrs.module.kenyacore.form.FormDescriptor">
         <property name="targetUuid" value="e82608d8-6d03-486c-a4c4-c40e8d54e652" />
         <property name="apps">
             <set>
@@ -81,48 +81,48 @@
                 <ref bean="kenyaemr.app.chart" />
             </set>
         </property>
-        <property name="icon" value="keaddonexample:forms/example.png" />
-        <property name="htmlform" value="keaddonexample:EIDLabRequisition.xml" />
+        <property name="icon" value="addonmodule:forms/example.png" />
+        <property name="htmlform" value="addonmodule:EIDLabRequisition.xml" />
     </bean>
 
-    <bean id="keaddonexample.config.EIDLabRequisitionForm" class="org.openmrs.module.kenyacore.form.FormConfiguration">
+    <bean id="addonmodule.config.EIDLabRequisitionForm" class="org.openmrs.module.kenyacore.form.FormConfiguration">
         <property name="commonVisitForms">
             <set>
-                <ref bean="keaddonexample.form.EIDLabRequisition" />
+                <ref bean="addonmodule.form.EIDLabRequisition" />
             </set>
         </property>
     </bean>
 
     <!--Reports-->
 
-    <bean id="keaddonexample.common.reports.keaddonReport" class="org.openmrs.module.kenyacore.report.CalculationReportDescriptor">
+    <bean id="addonmodule.common.reports.keaddonReport" class="org.openmrs.module.kenyacore.report.CalculationReportDescriptor">
         <property name="targetUuid" value="b694b1bc-2086-47dd-a4ad-ba48f9471e4b" />
         <property name="name" value="Patients enrolled for HIV program" />
-        <property name="calculation" value="org.openmrs.module.keaddonexample.calculation.keaddonexampleCalculation" />
+        <property name="calculation" value="org.openmrs.module.addonmodule.calculation.keaddonexampleCalculation" />
         <property name="apps"><set><ref bean="kenyaemr.app.reports" /></set></property>
     </bean>
 
-    <bean id="keaddonexample.common.report" class="org.openmrs.module.kenyacore.report.ReportConfiguration">
+    <bean id="addonmodule.common.report" class="org.openmrs.module.kenyacore.report.ReportConfiguration">
         <property name="commonReports" >
-            <ref bean="keaddonexample.common.reports.keaddonReport"/>
+            <ref bean="addonmodule.common.reports.keaddonReport"/>
         </property>
     </bean>
 
 
     <!--
-    <bean id="keaddonexample.common.reports.keaddonReport" class="org.openmrs.module.kenyacore.report.CalculationReportDescriptor">
+    <bean id="addonmodule.common.reports.keaddonReport" class="org.openmrs.module.kenyacore.report.CalculationReportDescriptor">
         <property name="targetUuid" value="b694b1bc-2086-47dd-a4ad-ba48f9471e4b" />
         <property name="name" value="Patients enrolled for HIV program" />
-        <property name="calculation" value="org.openmrs.module.keaddonexample.calculation.keaddonexampleCalculation" />
+        <property name="calculation" value="org.openmrs.module.addonmodulelculation.keaddonexampleCalculation" />
         <property name="apps"><set><ref bean="kenyaemr.app.reports" /></set></property>
     </bean>
 
-    <bean id="keaddonexample.common.report" class="org.openmrs.module.kenyacore.report.ReportConfiguration">
+    <bean id="addonmodule.common.report" class="org.openmrs.module.kenyacore.report.ReportConfiguration">
         <property name="programReportsReports" >
             <map>
                 <entry key-ref="kenyaemr.mchms.program">
                     <set>
-                        <ref bean="keaddonexample.common.reports.keaddonReport"/>
+                        <ref bean="addonmodule.common.reports.keaddonReport"/>
                     </set>
                </entry>
 
@@ -135,16 +135,16 @@
 
     <!--Programs-->
 
-    <bean id = "keaddonexample.mchexample.program" class="org.openmrs.module.kenyacore.program.ProgramDescriptor">
+    <bean id = "addonmodule.mchexample.program" class="org.openmrs.module.kenyacore.program.ProgramDescriptor">
         <property name="targetUuid" value="b32ca1cc-5dad-48e4-b340-6d7857364f5b" />
-        <property name= "eligibilityCalculation" value="org.openmrs.module.keaddonexample.calculation.EligibleForMCHProgram"/>
+        <property name= "eligibilityCalculation" value="org.openmrs.module.addonmodule.calculation.EligibleForMCHProgram"/>
         <property name= "defaultEnrollmentForm" ref="kenyaemr.mchms.form.enrollment"/>
         <property name="defaultCompletionForm" ref="kenyaemr.mchms.form.completion"/>
     </bean>
 
-    <bean id = "keaddonexample.postnatalcare.program" class="org.openmrs.module.kenyacore.program.ProgramDescriptor">
+    <bean id = "addonmodule.postnatalcare.program" class="org.openmrs.module.kenyacore.program.ProgramDescriptor">
         <property name="targetUuid" value="199f012f-1a94-402c-b12d-b869edb7994e" />
-        <property name= "eligibilityCalculation" value="org.openmrs.module.keaddonexample.calculation.EligibleForPostNatalCareProgram"/>
+        <property name= "eligibilityCalculation" value="org.openmrs.module.addonmodule.calculation.EligibleForPostNatalCareProgram"/>
         <property name= "defaultEnrollmentForm" ref="kenyaemr.mchms.form.enrollment"/>
         <property name="defaultCompletionForm" ref="kenyaemr.mchms.form.completion"/>
     </bean>

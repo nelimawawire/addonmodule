@@ -1,0 +1,173 @@
+<htmlform>
+    <style type="text/css">
+        table.tb {
+        background-color: #B3C2F0;
+        border: 1px solid black;
+        }
+
+        table.tb1 {
+        border: 1px solid black;
+        vertical-align: baseline;
+        text-align: left;
+        background-color: #E1E1FF;
+        }
+
+        table.tb1 tr th, table.tb1 tr td {
+        border: 0;
+        padding: 10px;
+        }
+    </style>
+
+    <div class="ke-form-header">
+        <table width="100%">
+            <tr>
+                <td>Date <encounterDate id="encounter-date" showTime="true" /></td>
+                <td>Provider <encounterProvider default="currentUser" /></td>
+                <td>Location <encounterLocation default="GlobalProperty:kenyaemr.defaultLocation" type="autocomplete"/></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="ke-form-content">
+        <table width="100%" valign="top" >
+            <tr>
+                <td>
+                    <fieldset>
+                        <legend><b><h2>Sample Collection Material Requisition (Indicate Quantity) </h2></b></legend>
+                        <table width="100%" class="tb1">
+                           <tr align="left">
+                                <td width = "15%">DBS Filter Paper:</td><td width = "35%"><obs conceptId="159635AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" /></td>
+                                <td width = "15%">Glycine Envelops:</td><td width="35%"><obs conceptId="159635AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" /></td>
+                            </tr>
+                            <tr>
+                                <td width = "15%">Ziploc Bags:</td><td width = "35%"><obs conceptId="159635AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" /></td>
+                                <td width = "15%">Drying Racks:</td><td width = "35%"><obs conceptId="159635AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" /></td>
+                            </tr>
+                            <tr align="left">
+                                <td width = "15%">Desiccants:</td><td width = "35%"><obs conceptId="159635AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" /></td>
+                                <td width = "15%">Lancets:</td><td width = "35%"><obs conceptId="159635AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" /></td>
+                            </tr>
+                            <tr align="left">
+                                <td width = "15%">Lab Requisition Forms:</td><td width = "35%"><obs conceptId="159635AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" /></td>
+                                <td width = "15%">Other (Specify):</td><td width = "35%"><obs conceptId="159635AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" /></td>
+                            </tr>
+
+                        </table>
+                    </fieldset>
+                </td>
+                <td valign="top" width="30%">
+                    <fieldset>
+                        <legend><b><h2>Comments/Requests/Issues</h2></b></legend>
+                        <table width="100%" border="0" class="tb1">
+                            <tr>
+                                <td><obs conceptId="161011AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" /></td>
+                            </tr>
+                        </table>
+                    </fieldset>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="ke-form-content">
+        <fieldset>
+            <table align="center" border="0" class="tb" cellspacing="10">
+                <legend><center><b><h2> DBS SAMPLES LOG </h2></b></center></legend>
+                <tr>
+                    <td valign="top">
+                        <table align="center" width="100%" class="tb1">
+                            <div id="">
+                                <tr>
+                                    <th colspan="1" style="background-color: #B3C2F0; color: #000000;">DBS Sample</th>
+                                    <th colspan="3" style="background-color: #B3C2F0; color: #000000;">Infant Information</th>
+                                    <th colspan="3" style="background-color: #B3C2F0; color: #000000;">Mother PMTCT Information</th>
+                                    <th colspan="2" style="background-color: #B3C2F0; color: #000000;">Confirm if 2nd PCR sample</th>
+                                </tr>
+                                <tr>
+                                    <th style="background-color: #B3C2F0; color: #000000;">Date of <br /> Sample <br />collection</th>
+                                    <!--<th style="background-color: #B3C2F0; color: #000000;">Infant ID</th>-->
+                                    <!--<th>Date of Birth</th>-->
+                                    <!--<th>SEX(M/F)</th>-->
+                                    <th style="background-color: #B3C2F0; color: #000000;">Entry Point<br />(code)</th>
+                                    <th style="background-color: #B3C2F0; color: #000000;">Infant<br />Prophylaxis<br />(code)</th>
+                                    <th style="background-color: #B3C2F0; color: #000000;">Infant<br />Feeding<br />(code)</th>
+                                    <th style="background-color: #B3C2F0; color: #000000;">Caregiver <br />contacts<br />(phone number)</th>
+                                    <th style="background-color: #B3C2F0; color: #000000;">HIV status<br />(NEG/POS)</th>
+                                    <th style="background-color: #B3C2F0; color: #000000;">PMTCT<br />REGIMEN</th>
+                                    <th style="background-color: #B3C2F0; color: #000000;">Repeat for<br />Rejection<br />(Y/N)</th>
+                                    <th style="background-color: #B3C2F0; color: #000000;">Confirmatory PCR<br />@ 9 months<br />(Y/N)</th>
+                                </tr>
+                                <repeat>
+                                    <template>
+                                        <!--<obsgroup groupingConceptId="160593AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">-->
+                                        <tr>
+                                            <td><obs conceptId="159951AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" /></td>
+
+                                            <!--<td><obs conceptId="5325AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" /></td>-->
+                                            <!--<td><obs conceptId="160751AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" /></td>-->
+                                            <!--<td><obs conceptId="1587AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" answerConceptIds="1534AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,1535AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" answerLabels="Male,Female" style="dropdown"/></td>-->
+                                            <td><obs conceptId="160540AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                                                     answerConceptIds="160542AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,160537AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,160538AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,160539AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,159937AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                                                     answerLabels="OPD,Paediatric Ward,MCH/PMTCT,CCC,Maternity,OtherSpecify)"
+                                                     style="dropdown"/>
+                                            </td>
+
+                                            <td><obs conceptId="966AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                                                     answerConceptIds="80586AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,630AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,1067AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,5424AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                                                     answerLabels="NVP,NVP+AZT+3TC,None,Other(Specify)"
+                                                     style="dropdown"/>
+                                            </td>
+
+                                            <td><obs conceptId="1151AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                                                     answerConceptIds="5526AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,1595AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,6046AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                                                     answerLabels="Exclusive Breastfeeding,Replacement Feeding,Mixed Feeding"
+                                                     style="dropdown"/>
+                                            </td>
+
+                                            <td><obs conceptId="159635AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" /></td>
+
+                                            <td><obs conceptId="1169AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                                                     answerConceptIds="664AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,703AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                                                     answerLabels="Negative,Positive"
+                                                     style="dropdown"/>
+                                            </td>
+
+                                            <td><obs conceptId="1088AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                                                     answerConceptIds="80586AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,86663AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,1652AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,5424AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                                                     answerLabels="sdNVP only,AZT,3TC/NVP/AZT,Other(Specify)"
+                                                     style="dropdown"/>
+                                            </td>
+
+                                            <td></td>
+
+                                            <td><obs conceptId="1030AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                                                     answerConceptIds="703AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,664AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                                                     answerLabels="YES,NO"
+                                                     style="dropdown"/>
+                                            </td>
+                                        </tr>
+                                        <!--</obsgroup>-->
+                                    </template>
+                                    <render n="1" concept=" " />
+                                    <render n="2" concept=" " />
+                                    <render n="3" concept=" " />
+                                    <render n="4" concept=" " />
+                                    <render n="5" concept=" " />
+                                    <render n="6" concept=" " />
+                                    <render n="7" concept=" " />
+                                    <render n="8" concept=" " />
+                                    <render n="9" concept=" " />
+                                    <render n="10" concept=" " />
+                                </repeat>
+                            </div>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+    </div>
+    <div class="ke-form-footer">
+        <submit />
+    </div>
+
+</htmlform>
