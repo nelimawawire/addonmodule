@@ -14,11 +14,12 @@
 		<url>http://www.go2itech.org</url>
 	</organization>
 
-	<scm>
+	<!--<scm>
 		<connection>scm:git:git@github.com:I-TECH/openmrs-module-keaddonexample.git</connection>
 		<developerConnection>scm:git:git@github.com:I-TECH/openmrs-module-keaddonexample.git</developerConnection>
 		<url>scm:git:git@github.com:I-TECH/openmrs-module-keaddonexample.git</url>
 	</scm>
+	-->
 
 	<modules>
 		<module>api</module>
