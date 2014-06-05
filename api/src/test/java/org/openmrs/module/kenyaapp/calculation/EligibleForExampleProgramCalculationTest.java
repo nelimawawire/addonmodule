@@ -12,7 +12,7 @@
  * Copyright (C) OpenMRS, LLC.  All Rights Reserved.
  */
 
-package org.openmrs.module.keaddonexample.calculation;
+package org.openmrs.module.kenyaapp.calculation;
 
 import org.junit.Assert;
 import org.junit.Before;
@@ -20,6 +20,7 @@ import org.junit.Test;
 import org.openmrs.api.context.Context;
 import org.openmrs.calculation.patient.PatientCalculationService;
 import org.openmrs.calculation.result.CalculationResultMap;
+import org.openmrs.module.keaddonexample.calculation.EligibleForExampleProgramCalculation;
 import org.openmrs.module.keaddonexample.metadata.ExampleMetadata;
 import org.openmrs.test.BaseModuleContextSensitiveTest;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,7 +29,7 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * Tests for {@link EligibleForExampleProgramCalculation}
+ * Tests for {@link org.openmrs.module.keaddonexample.calculation.EligibleForExampleProgramCalculation}
  */
 public class EligibleForExampleProgramCalculationTest extends BaseModuleContextSensitiveTest {
 

@@ -12,7 +12,7 @@
  * Copyright (C) OpenMRS, LLC.  All Rights Reserved.
  */
 
-package org.openmrs.module.keaddonexample.page.controller.example;
+package org.openmrs.module.kenyaapp.page.controller.example;
 
 import org.openmrs.Patient;
 import org.openmrs.module.keaddonexample.ExampleConstants;

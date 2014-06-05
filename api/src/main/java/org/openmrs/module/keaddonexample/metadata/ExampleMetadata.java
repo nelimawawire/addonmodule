@@ -31,8 +31,13 @@ public class ExampleMetadata extends AbstractMetadataBundle {
 
 	public static class _Form {
 		public static final String EXAMPLE = "b694b1bc-2086-47dd-a4ad-ba48f9471e4b";
+        public static final String EIDLABREQUISITION = "e82608d8-6d03-486c-a4c4-c40e8d54e652";
 	}
 
+    public static class _program {
+        public static final String MCHEXAMPLE = "b32ca1cc-5dad-48e4-b340-6d7857364f5b";
+        public static final String POSTNATALCARE = "199f012f-1a94-402c-b12d-b869edb7994e";
+    }
 	/**
 	 * @see org.openmrs.module.metadatadeploy.bundle.AbstractMetadataBundle#install()
 	 */
@@ -40,6 +45,12 @@ public class ExampleMetadata extends AbstractMetadataBundle {
 	public void install() {
 		install(encounterType("Example encounter", "Just an example", _EncounterType.EXAMPLE));
 
-		install(form("Example form", null, _EncounterType.EXAMPLE, "1", _Form.EXAMPLE));
+		install(form("Example form", null, _EncounterType.EXAMPLE,"1", _Form.EXAMPLE));
+        install (form ("EID Lab Requisition Form", null,_EncounterType.EXAMPLE,"1",_Form.EIDLABREQUISITION));
+
+
+        install (program("MCH Trial program", "Just a trial program", Dictionary.EXAMPLE ,_program.MCHEXAMPLE ));
+
+        install (program("Post Natal Care", "Post Natal Care program", Dictionary.EXAMPLE, _program.POSTNATALCARE));
 	}
 }

@@ -22,7 +22,7 @@ public class ExampleConstants {
 	/**
 	 * Module ID
 	 */
-	public static final String MODULE_ID = "keaddonexample";
+	public static final String MODULE_ID = "kenyaapp";
 
 	/**
 	 * App IDs
